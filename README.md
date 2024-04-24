@@ -1,4 +1,4 @@
-<h1> Fire2a Open source software panorama </h1>
+<h1> Fire2a Open Source panorama </h1>
 
 # Contact us
 
@@ -6,27 +6,21 @@
 | --- | --- | --- | 
 | Outreach |  https://www.fire2a.com | fire2a@fire2a.com | 
 | User docs |  https://fire2a.github.io/docs/ | github-issues "forum" |
-| Developer docs |  https://www.github.com/fire2a | Pull Requests |
 | Algorithms docs |  https://fire2a.github.io/fire2a-lib/ | Pull Requests |
+| Developer docs |  https://www.github.com/fire2a | Pull Requests |
+
 
 # Overview
+__Cell2Fire:__  
+- WildFire Simulator  
+- Command Line Interface  
 
-* Cell2Fire:
+__Fire-ToolBox:__  
+- Friendly interface for Cell2Fire + Optimization and Analytics tools, etc.  
+- QGIS Interfaces (x5)  
 
- 	WildFire Simulator  
-	Command Line Interface  
-	https://www.github.com/fire2a/C2F-W
-
-* Fire-ToolBox:
-
-	Friendly interface for Cell2Fire + Optimization and Analytics tools  
-	QGIS Interfaces (x5)  
-	https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin
-
-* Fire2a-lib
-
-	Algorightms and common GIS tasks Python library  
-	https://github.com/fire2a/fire2a-lib
+__Fire2a-lib:__  
+- Algorithms and common GIS tasks Python library  
 
 # History, Features & Roadmap
 
@@ -36,13 +30,13 @@
 * Forked from Cell2Fire@github
 * Only linux source code
 * Only CanadaFBP
-* Slow python wrapper
+* Slow Python wrapper
 
 ### Present
 * x3 firebehaviour models (CanadaFBP, Kitral, Scott&Burgan)
 * Windows, Linux and MacOS* (x86_64 compiled) available releases
-* Only C++ code 
-* More metrics: Fireline Intensity, Flame Length, Rate of Spread, Fire Front Length, Fire Perimeter, Fire Area
+* Only fast C++ code 
+* More metrics: Fireline Intensity, Flame Length, Crown/Surface fractions
 * Single year focus
 * CLI help abandoned (dont use `./Cell2Fire --help` go to web documentation)
 * Stopping early is confusing, simpler by cutting you weather.csv
@@ -54,16 +48,19 @@
 * Inputs AIIGrid rasters.asc + GTiff 
 * Outputs some csv, some asc + GTiff
 * Short term combat callback
+* CO2 estimation
+
 #### Fixes
-* MacOS fixes:
-
-	Current release relies on pre-installed developer tools (Xcode & brew)  
-	Newer Apple M1 Darwin.arm64 support
-
+* MacOS release relies on pre-installed developer tools (Xcode & brew)  
+* Apple M1 Darwin.arm64 support
 * Parallel bug-fixes:
 
 	Standard output is not well buffered (thread prints interrupt each other, unlikely but was happened)  
 	Flame Lenght not reliable
+
+#### Possible
+* Only python version to be available in regular QGIS repo store? (no compiled code allowed)
+
 
 ## Fire-ToolBox
 _mantra: research that can become a reproducible tool..._
@@ -79,7 +76,9 @@ _mantra: research that can become a reproducible tool..._
 * Match input weather with output polygons timestamps
 * Meteo generator (Chile)
 * Documentación en Español (Junio)
-* Clusterizer
+* Clusterizer, etc.
+#### Possible
+* Without Cell2Fire version to be available in regular QGIS repo store? (no compiled code allowed)
 ### Won't fix bugs
 * Gurobipy in windows (Cplex works fine)
 * Pyomo is kinda slow (but flexible, integrates with many MIP solvers and the plugin can distributed "with batteries included" CBC solver)
