@@ -28,8 +28,8 @@ __3. Fire2a-lib:__
 
 ### Past
 * Forked from Cell2Fire@github
-* Only linux source code (user must compile before use)
 * Only CanadaFBP
+* Only linux source code (user must compile before use)
 * Slow Python wrapper
 
 ### Present
