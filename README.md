@@ -11,20 +11,20 @@
 
 
 # Overview
-__Cell2Fire:__  
+__1. Cell2Fire:__  
 - WildFire Simulator  
 - Command Line Interface  
 
-__Fire-ToolBox:__  
+__2. Fire-ToolBox:__  
 - Friendly interface for Cell2Fire + Optimization and Analytics tools, etc.  
 - QGIS Interfaces (x5)  
 
-__Fire2a-lib:__  
+__3. Fire2a-lib:__  
 - Algorithms and common GIS tasks Python library  
 
 # History, Features & Roadmap
 
-## Cell2Fire-W
+## 1. Cell2Fire-W
 
 ### Past
 * Forked from Cell2Fire@github
@@ -61,7 +61,7 @@ __Fire2a-lib:__
 	Flame Lenght not reliable
 
 
-## Fire-ToolBox
+## 2. Fire-ToolBox
 _mantra: research that can become a reproducible tool..._
 
 ### Past
@@ -87,19 +87,19 @@ _mantra: research that can become a reproducible tool..._
 ### Couldn't fix bugs
 * Cancel button won't stop pyomo optimization: close the solver window (or kill the process) manually; also it has a timelimit by default...
 
-## Fire2a-lib
+## 3. Fire2a-lib
 
 ### Past
 * everything, everywhere all scattered and repeated
   
 ### Present
-* A repo centralizing common methods and helpers
+* A repo centralizing _most_ algorithms and common GIS tasks used by the Fire-toolbox and Fire-Res researchers
 * QGIS (gdal, ogr) is main dependecy
-* pip install git+https://github.com/fire2a/fire2a-lib.git
+* pip install git+https://github.com/fire2a/fire2a-lib.git (needs github credentials)
 
 ### Future
 * Two flavors for non-QGIS users
-* pip install fire2a-lib
-* unit tests (pytest)
+* pip install fire2a-lib (register in PyPI authority)
+* unit tests (pytest) and deploy action
 
 made by fdobad@github
