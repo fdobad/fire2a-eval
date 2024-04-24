@@ -28,13 +28,13 @@ __3. Fire2a-lib:__
 
 ### Past
 * Forked from Cell2Fire@github
-* Only linux source code
+* Only linux source code (user must compile before use)
 * Only CanadaFBP
 * Slow Python wrapper
 
 ### Present
 * x3 firebehaviour models (CanadaFBP, Kitral, Scott&Burgan)
-* Windows, Linux and MacOS* (x86_64 compiled) available releases
+* Windows, Linux and MacOS* (x86_64, auditable & automated compilation) ready to use downloadable releases
 * Only fast C++ code 
 * More metrics: Fireline Intensity, Flame Length, Crown/Surface fractions
 * Single year focus
