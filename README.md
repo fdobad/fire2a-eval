@@ -1,4 +1,4 @@
-<h1> Fire2a Open Source panorama </h1>
+<h1> Fire2a Open Source Panorama </h1>
 
 # Contact us
 
@@ -42,6 +42,7 @@ __Fire2a-lib:__
 * Stopping early is confusing, simpler by cutting you weather.csv
 
 ### Future
+
 #### Features
 * Portugal fire behaviour model
 * Fire spotting, breaching
@@ -49,17 +50,15 @@ __Fire2a-lib:__
 * Outputs some csv, some asc + GTiff
 * Short term combat callback
 * CO2 estimation
+* Slow Python only version to be available in regular QGIS repo store? (no compiled code allowed)
 
 #### Fixes
-* MacOS release relies on pre-installed developer tools (Xcode & brew)  
+* MacOS release relies on pre-installed developer tools (Xcode & brew)
 * Apple M1 Darwin.arm64 support
 * Parallel bug-fixes:
 
 	Standard output is not well buffered (thread prints interrupt each other, unlikely but was happened)  
 	Flame Lenght not reliable
-
-#### Possible
-* Only python version to be available in regular QGIS repo store? (no compiled code allowed)
 
 
 ## Fire-ToolBox
@@ -68,32 +67,36 @@ _mantra: research that can become a reproducible tool..._
 ### Past
 * Not a processing plugin (was just a dialog)
 * Only a Cell2Fire interface
+
 ### Present
 * A processing plugin enables 5 interfaces/integrations (dialog, batch[dialog], modeler[pipeline], python[x3], console)
 * Decision Optimization Models (Integer programming for knapsacks, treatments, firebreak-placement, etc)
 * Risk Metrics Calculation
+
 ### Future
 * Match input weather with output polygons timestamps
 * Meteo generator (Chile)
 * Documentación en Español (Junio)
 * Clusterizer, etc.
-#### Possible
-* Without Cell2Fire version to be available in regular QGIS repo store? (no compiled code allowed)
+  
 ### Won't fix bugs
 * Gurobipy in windows (Cplex works fine)
 * Pyomo is kinda slow (but flexible, integrates with many MIP solvers and the plugin can distributed "with batteries included" CBC solver)
-* Folder names with spaces ...
-* OneDrive, Google Drive or network drive won't work...
+* OneDrive, Google Drive or network drives causes all kind of issues...
+
 ### Couldn't fix bugs
 * Cancel button won't stop pyomo optimization: close the solver window (or kill the process) manually; also it has a timelimit by default...
 
 ## Fire2a-lib
+
 ### Past
-* all scattered and repeated everywhere 
+* everything, everywhere all scattered and repeated
+  
 ### Present
 * A repo centralizing common methods and helpers
 * QGIS (gdal, ogr) is main dependecy
 * pip install git+https://github.com/fire2a/fire2a-lib.git
+
 ### Future
 * Two flavors for non-QGIS users
 * pip install fire2a-lib
